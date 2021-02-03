@@ -64,3 +64,11 @@ activation2.forward(dense2.output)
 loss = loss_function.calculate(activation2.output, y)
 
 print("Loss:", loss)
+
+#Accuracy Calculation
+predictions = np.argmax(activation2.output,axis=1)
+#print(predictions)
+#print(y)
+accuracy = np.mean(predictions==y)
+
+print(accuracy)
